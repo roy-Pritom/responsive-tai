@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+</head>
+<body>
+    <!-- header  -->
+    <header>
+<!-- nav Bar  start -->
+<nav class="text-white bg-purple-500 px-5 py-3 flex justify-between items-center">
+<div class="">
+    <h1 class="font-bold text-xl">indeed.com</h1>
+</div>
+<div class="flex md:flex-row flex-col absolute md:static bg-purple-500 md:min-h-fit min-h-[40vh] top-[-100%]  px-4    md:gap-8 md:items-center gap-4 navLinks right-0 md:w-auto">
+    <ul class="md:flex md:gap-8 ">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Login</a></li>
+    </ul>
+
+
+
+
+    <button class="px-7 py-2 font-medium bg-blue-400 text-white rounded-md">Get Started</button>
+
+</div>
+<div class="md:hidden cursor-pointer">
+    <ion-icon id="menuBar" onclick="toggleMenu(this)" name="menu-outline"></ion-icon>
+</div>
+</nav>
+<!-- nav bar end -->
+    </header>
+    <script>
+        const navLink=document.querySelector('.navLinks')
+        const toggleMenu=(e)=>{
+          console.log(e)
+          console.log(e.name)
+        //   e.name=e.name==='menu' ? 'close' : 'menu'
+          e.name=e.name==='close'?'menu':'close';
+
+          navLink.classList.toggle('top-[9%]')
+
+        }
+    </script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    
+
+</body>
+</html>
